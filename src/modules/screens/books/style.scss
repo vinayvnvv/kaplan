@@ -1,0 +1,99 @@
+.books {
+    & .t-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 41px 0px;
+        &>.title {
+            font-weight: 900;
+            font-size: 25px;
+            color:#333;
+        }
+    }
+    & .search {
+        position: relative;
+        margin-top: 39px;
+        &>input {
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid #d9d9d9;
+            outline: none;
+            padding-left: 37px;
+            width: 50%;
+            max-width: 400px;
+            font-size: 20px;
+            padding-bottom: 7px;
+            &:hover {
+                border-color: #999;
+            }
+            &:focus {
+                border-color: #000;
+            }
+        }
+        &>i {
+            position: absolute;
+            left: 9px;
+            font-size: 21px;
+        }
+    }
+    & .b-lists {
+        margin: 41px 0px;
+        &>.s-ttl {
+            font-weight: 600;
+            color: #555;
+            font-size: 21px;
+        }
+        &>.lists {
+            margin-top: 31px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -13px;
+            &>.book {
+                width: 50%;
+                &>div {
+                    border: 1px solid #d9d9d999;
+                    border-left: 4px solid orange;
+                    border-radius: 4px;
+                    background-color: #fff;
+                    margin: 17px 13px;
+                    padding: 21px;
+                    box-shadow: 1px 1px 3px -1px #d9d9d9;
+                    &>.b-title {
+                        font-weight: 700;
+                        font-size: 18px;
+                        color: #555;
+                    }
+                    &>.b-itm {
+                        font-weight: 300;
+                        color: #666;
+                        margin-top: 3px;
+                    }
+                }
+                
+            }
+        }
+    }
+    & .loader {
+        width: 315px;
+        height: 150px; 
+        cursor: progress; 
+        background: 
+            linear-gradient(0.25turn, transparent, #fff, transparent),
+            linear-gradient(#eee, #eee),
+            radial-gradient(38px circle at 19px 19px, #eee 50%, transparent 51%),
+            linear-gradient(#eee, #eee);  
+        background-repeat: no-repeat;
+        background-size: 315px 100px, 315px 100px, 100px 100px, 225px 30px; 
+        background-position: -315px 0, 0 0, 0px 190px, 50px 195px; 
+        animation: loading 1.5s infinite;
+      }
+    & .no-res {
+        margin-top: 30px;
+        color: #999;
+    }
+}
+@keyframes loading {  
+    to {
+      background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+    }
+  }
